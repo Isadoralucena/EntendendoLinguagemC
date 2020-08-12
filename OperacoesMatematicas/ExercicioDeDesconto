@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+main(){
+    setlocale(LC_ALL,"portuguese");
+    float produto, desconto, preco;
+    printf("Digite o valor a ser descontado:");
+    scanf("%f", &produto);
+    printf("Digite o desconto em porcentagem: %%");
+    scanf("%f", &desconto);
+    preco= ((desconto/100) * produto);
+    printf("O preço com desconto é = %6.2f", preco);
+    return(0);
+    system("pause");
+
+}
