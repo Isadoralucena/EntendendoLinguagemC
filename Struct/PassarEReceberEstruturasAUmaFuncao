@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+//Definindo
+struct ghorario{int horas;int minutos;int segundos};//"g" de variável global
+
+//Função principal
+int main(void){
+    //Variável teste de tipo ghorario que recebe como argumento uma estrutura x do mesmo tipo(isso não é obrigatório)
+    struct ghorario teste(struct ghorario x);
+
+    //Declarando
+    struct ghorario agora;
+    agora.horas=10;
+    agora.minutos=42;
+    agora.segundos=58;
+
+    struct ghorario proxima;//Declarando outra estrutura
+    proxima=teste(agora);//Chamando
+
+    printf("%i:%i:%i\n", proxima.horas, proxima.minutos, proxima.segundos);
+
+    system("pause");
+    return 0;
+}
+struct ghorario teste(struct ghorario x){
+    //Reconhecendo os valores recebidos na chamada da função teste
+    printf("%i:%i:%i\n",x.horas, x.minutos, x.segundos);
+
+    //Alterando
+    x.horas=30;
+    x.minutos=30;
+    x.segundos=30;
+    return x;
+}
