@@ -1,0 +1,49 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+//A estrutura lista está sendo definida como global porque vai ser utilizada em mais de uma função
+struct lista{int valor;struct lista *proximo};//O ponteiro proximo aponta para estruturas do seu mesmo tipo
+
+//A função retornará um endereço de memória/ponteiro de tipo struct lista(por isso o * antes do seu nome)
+struct lista *procurarValor(struct lista *pLista,int valorInformado){//E receberá um ponteiro, de uma stuct lista, e um valor
+
+    // Enquanto o ponteiro pLista não apontar para nulo, o loop continuará
+    while(pLista != (struct lista *)0){
+        //Verificando se o valor digitado pelo usuário está na lista
+        if(pLista->valor == valorInformado){//Se o valor que o ponteiro apontar for igual ao valor informado pelo usuário, então
+            return(pLista);//Retorna-se o endereço de memória
+        }else{
+            pLista = pLista->proximo;//Gancho/membro1 está apontando pra proximo do membro1, que está pro membro2, que está pro membro3
+        }
+    }
+    return (struct lista *)0;//Caso não seja encontrado o valor que o usuário está pesquisando, então
+}
+
+int main(void){
+    struct lista *procurarValor(struct lista *pLista,int valorInformado);
+    struct lista m1,m2,m3;
+    struct lista *resultado, *gancho=&m1;
+    int valorInformado;
+
+    m1.valor=5;
+    m2.valor=10;
+    m3.valor=15;
+
+    m1.proximo=&m2;
+    m2.proximo=&m3;
+    m3.proximo=0;
+
+    printf("Digite o valor que deseja pesquisar: ");
+    scanf("%i", &valorInformado);
+
+    resultado=procurarValor(gancho,valorInformado);//Chamando
+
+    if(resultado == (struct lista *)0){
+        printf("Valor nao encontrado\n");
+    }else{
+        printf("Valor %i encontrado\n",resultado->valor);
+    }
+
+    system("pause");
+    return 0;
+}
