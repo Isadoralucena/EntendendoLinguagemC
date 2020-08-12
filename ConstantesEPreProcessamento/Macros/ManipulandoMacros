@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+#define MAIOR(x,y) x > y ? x : y
+//Se x for maior que y, return x, se não, return y
+#define E_MINUSCULO(char) char >= 'a' && char <= 'z'
+//Se char estiver entre ou for igual a 'a' ou 'z', return true
+int main(void){
+
+    char x = 'a';
+
+    if(E_MINUSCULO(x)){
+        printf("Eh uma letra minuscula\n");
+    }else{
+        printf("Nao eh uma letra minuscula\n");
+    }
+
+    printf("%i\n",MAIOR(10,50));
+
+    getchar();
+    return 0;
+}
