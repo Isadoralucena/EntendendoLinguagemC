@@ -1,0 +1,10 @@
+#include <stdio.h>
+
+void main(void){
+    char letra='x';
+    printf("O valor da letra %c eh igual a: %i\n",letra , letra);
+    //Como atribui-se valores as letras, é possível fazer condições como 'x' > 'a'
+    int eh=130;
+    printf("%c",eh);
+    getchar();
+}
