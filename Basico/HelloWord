@@ -1,0 +1,15 @@
+#include <stdio.h>//Biblioteca para as necessidades básicas
+#include <stdlib.h>//Biblioteca para o system("pause")
+
+//Função principal do programa
+int main(){
+
+    //Imprime na tela
+    printf("Hello word!");
+
+    //Retorna o valor 0
+    return 0;
+
+    //Pausa o programa após executar
+    system("pause");
+}
