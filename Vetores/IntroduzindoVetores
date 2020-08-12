@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>//Biblioteca para acentuação
+
+void main(){
+
+    setlocale(LC_ALL,"portuguese");
+    //Vetor é uma variável que comporta casas ou posições
+    //Vetor = matriz unidimensional(uma dimensão/uma linha)
+    int a[5]={10,50,89,78,90}, y=2;
+    a[4]=56;
+    a[0]=y;
+    scanf("%i",&a[3]);
+
+    for(y=0; y<5;y++){
+        printf("\nPosicao %i tem o valor: %i ", y, a[y]);
+    }
+    float notas[5]={0};//Ao declarar uma posição, todas as outras serão atribuídas = 0
+    //Mas se nenhuma for atribuída a nada, a última posição será = a um valor aleatório da memória do computador
+    for(int i=0;i<5;i++){
+        printf("\n%i",notas[i]);
+    }
+    //Precisa-se colocar um caracter a mais para finalizar o final da string
+    //String = conjunto de caracteres
+    //Para representar uma string em C deve-se criar um vetor de caracteres/vetor do tipo char
+    char b[8]={'I', 's', 'a', 'd', 'o', 'r', 'a'};
+    printf("\n%s ",b);
+
+    system("pause");
+
+}
