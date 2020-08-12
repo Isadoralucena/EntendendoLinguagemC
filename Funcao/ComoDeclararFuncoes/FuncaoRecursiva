@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+//Função recursiva = função que chama ela mesma
+int main(void){
+    int fatorial(int x);
+    int numero, resultado;
+    printf("Digite um numero inteiro: ");
+    scanf("%i", &numero);
+    resultado= fatorial(numero);//Chamando outra função
+
+    printf("O fatorial eh: %i\n", resultado);
+
+    system("pause");
+    return 0;
+}
+int fatorial(int x){
+
+    int numeroFatorial;
+    if(x==0){
+        numeroFatorial=1;
+    }else{
+        numeroFatorial=x*fatorial(x-1);//Chamando a mesma função
+    }
+    return numeroFatorial;
+}
+
