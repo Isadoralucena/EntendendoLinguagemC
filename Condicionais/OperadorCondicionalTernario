@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+void main(){
+    int a = 10;
+    //Sua sintaxe é: (expressao booleana)?código 1: código 2;
+    printf(a < 11 ? "a eh menor que 11": "a nao eh maior ou igual a 11");
+    //Outra opção seria: (a < 11 ? printf"a eh menor que 11": printf"a nao eh maior ou igual a 11");
+    /*Estrutura acima usando if/else:
+		if(a<11){
+			printf"a eh menor que 11"
+		}else{
+			printf"a nao eh maior ou igual a 11"
+		}*/
+}
+
