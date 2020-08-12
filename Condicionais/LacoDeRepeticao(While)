@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <stdlib.h>
+//Função principal do programa sem retorno
+void main(){
+
+    //Definindo variáveis
+    int a = 1, b = 10;
+
+    //Contando até 10
+    while(a <= 10){
+        //Imprimindo a na tela
+        printf("\n%d", a);
+
+        //Incremento
+        a++; //a = a + 1;
+    }
+
+    //Contagem regressiva
+    while(b >= 1){
+        //Imprimindo a na tela
+        printf("\n%d", b);
+
+        //Incremento
+        b--; //b = b - 1;
+    }
+    //Pausa após executar o programa
+    system("pause");
+
+}
