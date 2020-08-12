@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+main(){
+
+    float valor = 45.00, quilo = 0.750;
+    setlocale(LC_ALL,"portuguese");
+
+    printf("O valor a ser pago pelo cliente é de %5.2f", valor * quilo);
+    printf("\nO valor a ser pago pelo cliente é de %5.2f", valor * 0.750);
+    printf("\nO valor a ser pago pelo cliente é de %5.2f", 45.00 * quilo);
+    printf("\nO valor a ser pago pelo cliente é de %5.2f", 45.00 * 0.750);
+
+    return(0);
+
+    system("pause");
+}
