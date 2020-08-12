@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main(void){
+    //\n pula para a próxima linha
+    //\b move o cursor uma posição à esquerda(mas se colocado no meio de uma string e não no final, deleta a letra à esquerda)
+    //\a produz um alarme sonoro do sistema
+    //\t funciona como uma tecla de tabulação(tab)
+    //\r volta para o início da linha
+    //\0 funciona como um caractere nulo ou zero, sendo estabelecido como finalizador de strings
+    //\" corresponde ao caractere "
+    //\' corresponde ao caractere '
+    printf("Teste");
+    getchar();
+
+}
