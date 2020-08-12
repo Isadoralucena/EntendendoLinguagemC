@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main(void){
+
+    char x[10];
+    char y[10];
+
+    //A função gets pede como parãmetro um vetor/ponteiro de caracteres, e armazena tudo que foi digitado
+    //Mas a questão é que: ela não especifica o tamanho máximo da string de entrada, podendo dá erro nas var. do programa
+    //E em outros compiladores
+    //Além de não ser usada mais em algumas atualizações da linguagem C
+    //fgets e fscanf são as opções mais seguras e que fazem as mesmas coisas que gets
+    gets(x);
+
+    printf("%s",x);
+
+    getchar();
+    return 0;
+}
