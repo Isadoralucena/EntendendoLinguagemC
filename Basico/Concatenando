@@ -1,0 +1,40 @@
+#include <stdio.h.>
+#include <stdlib.h>
+#include <locale.h>//Biblioteca que permite o uso de acentos
+
+//Usa-se "void" quando não há necessidade de um retorno
+void main(){
+
+    //Função que permite o uso de acentos tranquilamente
+    setlocale(LC_ALL,"portuguese");
+
+    //Definindo uma variável
+    int a = 5, b;
+
+    //Imprimindo a variável "a"
+    printf("%d", a);
+
+    //Concatenando
+    printf("\nO valor da var a é: %d", a);
+
+    //Mudando o valor de "a"
+    a = 15;
+
+    //Concatenando
+    printf("\nO valor da var a é: %d", a);
+
+    //Lendo valores
+    scanf("%d", &b);
+
+    //Concatenando
+    printf("\nO valor da var b eh: %d", b);
+
+    //Pula linhas
+    printf("\n");
+
+    //Imprimindo
+    printf("oi");
+
+    //Pausando
+    system("pause");
+}
