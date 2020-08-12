@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+struct ghorario{int horas;int minutos;int segundos};//"g" de variável global
+
+int main(void){
+    void receberHorarios(struct ghorario vetor[5]);//Não é necessário especificar o número de posições
+    void printarHorarios(struct ghorario vetor[5]);
+    struct ghorario listaDeHorarios[5];//Declarando um vetor de estruturas
+
+    receberHorarios(listaDeHorarios);//Chamando
+    printarHorarios(listaDeHorarios);//Chamando
+    system("pause");
+    return 0;
+}
+void receberHorarios(struct ghorario vetor[5]){
+    int i;
+    for(i=0;i<5;i++){//Se o número de posições não estivesse especificado, teria-se que alterar o código
+        printf("Digite o %d horario(hora:minuto:segundo):\n",i+1);
+        scanf("%i:%i:%i",&vetor[i].horas,&vetor[i].minutos,&vetor[i].segundos);
+    }
+}
+void printarHorarios(struct ghorario vetor[5]){
+    int i;
+    for(i=0;i<5;i++){
+        printf("O %d horario eh = %i:%i:%i\n",i+1,vetor[i].horas,vetor[i].minutos,vetor[i].segundos);
+    }
+}
