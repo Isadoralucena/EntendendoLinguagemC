@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+void main(){
+    float a1,a2,a3, valor, r1, r2;
+    printf("Informe o valor da conta: R$");
+    scanf("%f",&valor);
+
+    a1= valor/3;
+    a2= valor/3;
+    a3= valor/3;
+
+    //A função floor retorna apenas o valor que estiver após a vírgula, no caso,os centavos, que só o amigo 3 vai pagar
+    r1= a1-floor(a1);
+    a1= a1-r1;
+    r2= a2-floor(a2);
+    a2= a2-r2;
+    a3=a3+r1+r2;
+
+    printf("A conta deu =%6.2f, o amigo 1 vai pagar =%6.2f, o amigo 2 =%6.2f e o amigo 3 =%6.2f\n", valor, a1, a2, a3);
+
+    system("pause");
+}
