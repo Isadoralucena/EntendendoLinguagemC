@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void){
+    void teste(void);
+    teste();//Chamando a função
+    teste();//Chamando a função
+    teste();//Chamando a função
+    return 0;
+}
+
+void teste(void){
+    int variavelLocalAutomatica=2;
+    variavelLocalAutomatica*=2;//O mesmo que "variavelLocalAutomatica = variavelLocalAutomatica*2"
+    static int variavelLocalEstatica=2;//Variável que não é recriada cada vez que a função é chamada
+    variavelLocalEstatica*=2;
+    printf("Local Automatica = %i\n",variavelLocalAutomatica);
+    printf("Local Estatica = %i\n",variavelLocalEstatica);
+    return;
+}
