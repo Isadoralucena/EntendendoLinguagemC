@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+void main(){
+    setlocale(LC_ALL,"portuguese");
+    int idade, meses;
+    float dias;
+    printf("Qual a sua idade?");
+    scanf("%i", &idade);
+    meses= idade * 30;
+    dias= idade * 365;
+    printf("Já que sua idade é %i, você está vivo(a) a aproximadamente %i dias e %6.1f meses\n", idade, meses, dias);
+
+    system("pause");
+}
