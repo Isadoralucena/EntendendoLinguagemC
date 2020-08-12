@@ -1,0 +1,21 @@
+#include <stdio.h>//Biblioteca para as necessidades básicas
+#include <stdlib.h>//Biblioteca para o "system("pause")"
+#include <locale.h>//Biblioteca que permite o uso de acentos
+
+//Usa-se "void" quando não há necessidade de um retorno
+void main(){
+    //Função que permite o uso de acentos tranquilamente
+    setlocale(LC_ALL,"portuguese");
+    printf("Digite um número para calcular o seu fatorial: ");
+    int n;
+    scanf("%i", &n);
+    int i;//No caso da variável i ser criada no ciclo "for" ela não poderia ser lida fora
+    if(n==0){
+        printf("fatorial = 1");
+    }else{
+        for(i=1;n>=1;n--){
+            i*=n;//i = i * n
+        }
+    printf("Fatorial = %i", i);
+    }
+}
