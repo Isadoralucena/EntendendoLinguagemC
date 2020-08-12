@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void){
+    //struct horario agora={10,20,30};(Nesse caro, teria-se que declarar o tipo horario antes)
+    //struct horario agora={.segundos = 10,.minutos = 20};
+    struct horario{int horas;int minutos;int segundos}agora={10,20,30};
+    //No caso acima os valores atribuidos serão para as variáveis que estão na mesma ordem deles
+    //Se um dos membros de uma estrutura não for atribuido a nenhum valor, aparecerá no "printf" que ele é = 0
+
+    printf("%i:%i:%i\n", agora.horas, agora.minutos, agora.segundos);
+
+
+    system("pause");
+    return 0;
+
+}
