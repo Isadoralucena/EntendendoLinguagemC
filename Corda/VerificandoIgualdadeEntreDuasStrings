@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void){
+    _Bool stringsIguais(char string1[],char string2[]);
+    if(stringsIguais("casa","casa")){
+        printf("Sao iguais\n");
+    }else{
+        printf("Nao sao iguais\n");
+    }
+    system("pause");
+    return 0;
+}
+//O tipo de variável booleano é identificado em c como "_Bool"
+//Exceto no uso da biblioteca <stdbool.h>, passando a ser reconhecido como bool
+_Bool stringsIguais(char string1[],char string2[]){
+    int i=0;//Representa as posições dos caracteres da string
+    while(string1[i]==string2[i] && string1[i]!= '\0' && string2[i]!='\0'){
+        //O loop vai ser repetido até alguma das strings, em certo momento, serem = '\0', ou seus caracteres serem diferentes
+        i++;
+    }
+    if(string1[i]=='\0' && string2[i]=='\0'){//Elas irão para aqui quando forem = '\0'
+        return 1;//1 significa true
+    }else{//Elas irão para aqui quando tiverem seus caracteres diferentes em certa posição
+        return 0;//0 significa false
+    }
+}
