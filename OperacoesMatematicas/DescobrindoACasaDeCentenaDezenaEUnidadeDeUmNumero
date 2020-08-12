@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+void main(){
+    setlocale(LC_ALL,"portuguese");
+    int a, b, c, d, e;
+    printf("Digite um número com três dígitos: ");
+    scanf("%i", &a);
+    b= a/100;
+    c= a%100;
+    d= c/10;
+    e= c%10;
+    printf("O número digitado foi %i e sua centena = %i, dezena = %i e unidade = %i", a, b, d, e);
+    system("pause");
+}
