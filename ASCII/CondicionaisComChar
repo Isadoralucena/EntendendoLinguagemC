@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+void main(){
+
+    //Definindo variáveis
+    char letra = 'x';
+
+    //Condicional simples
+    if(letra == 'x'){
+        printf("A letra eh x");
+    }
+
+    //Para saber o codigo de um simbolo seguindo a tabela asc2
+    printf("\nO codigo da letra = %d", letra);
+
+    if(letra == 120){
+        printf("\nA letra eh x\n");
+    }
+
+    system("pause");
+
+}
