@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+main(){
+
+    int a = 10, b = 5, c = a + b;
+
+    setlocale(LC_ALL,"portuguese");
+
+    printf("A soma do valor %i mais %i é igual a %i", a, b, a + b);
+
+    //Ou
+    printf("\nA soma do valor %i mais %i é igual a %i", a, b, c);
+
+    return(0);
+
+    system("pause");
+}
