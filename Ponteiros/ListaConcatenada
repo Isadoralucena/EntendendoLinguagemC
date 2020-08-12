@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main(void){
+    //Definindo uma estrutura lista
+    struct lista{int valor;struct lista *proximo};//O ponteiro proximo aponta para estruturas do seu mesmo tipo
+
+    //Declarando variáveis de tipo lista
+    struct lista membro1,membro2,membro3;
+    struct lista *gancho;//O ponteiro gancho de tipo lista aponta para estruturas do seu mesmo tipo
+    gancho=&membro1;//Ele esta apontando para membro1
+
+    membro1.valor=10;
+    membro2.valor=20;
+    membro3.valor=30;
+
+    membro1.proximo=&membro2;//O ponteiro proximo do membro1 está apontando para o endereço de memória da variável membro2
+    membro2.proximo=&membro3;//O ponteiro proximo do membro2 está apontando para o endereço de memória da variável membro2
+    membro3.proximo=(struct lista *)0;//O ponteiro proximo do membro3 está apontando para uma estrutura nula/nada
+
+    while(gancho != (struct lista *)0){
+        printf("%i\n",gancho->valor);//Gancho/membro1 está apontando para valor, da estrutura lista
+        gancho = gancho->proximo;//Gancho/membro1 está apontando pra proximo do membro1, que está pro membro2, que está pro membro3
+    }
+
+    getchar();
+    return 0;
+}
