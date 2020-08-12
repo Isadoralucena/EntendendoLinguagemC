@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+void main(){
+    //Matriz é um vetor de vetores
+    //Uma matriz bidimensional(duas dimensões) tem colunas e linhas
+    //Matriz multimensional = mais de uma dimensão
+    //Vetor = matriz unidimensional(uma dimensão)
+    //A ordem abaixo(e das matrizes no geral) é da direita para a esquerda horizontalmente
+    //Quando não se define os valores da posição de uma matriz, eles serão = 0, exceto a última posição
+    //Ela terá um valor aleátorio retirado da memória do computador
+    //Mas se um for declarado, então os que não foram(todos)serão = 0
+    int m[3][3]={1,2,3,4,5,6,7,8,9};
+    printf("%i",m[0][3]);
+    system("pause");
+}
