@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+void main(void){
+
+    //Declarando a constante
+    const int numeroQualquer=10;
+
+    //Imprimindo
+    printf("%i",numeroQualquer);
+
+    //Contando até numeroQualquer
+    for(int i=1;i<=numeroQualquer;i++){
+        printf("\n%i",i);
+    }
+
+    //Pausa o programa após executar
+    system("pause");
+}
