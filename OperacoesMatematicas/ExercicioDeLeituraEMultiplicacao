@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+main(){
+    int quantidadeDeLeite = 0, quantidadeDePao = 0;
+    float custoDoLeite = 2.5, custoDoPao = 0.25, geralPao, geralLeite;
+
+    printf("Quantos paes foram pegos?");
+
+    scanf("%i", &quantidadeDePao);
+
+    printf("\nQuantos litros de leite foram pegos?");
+
+    scanf("%i", &quantidadeDeLeite);
+
+    geralLeite= quantidadeDeLeite*custoDoLeite;
+
+    geralPao= quantidadeDePao*custoDoPao;
+
+    printf("\nO leite ficou por %6.2f e o pao por %6.2f", geralLeite, geralPao);
+    printf("\nTotal: %6.2f", geralLeite + geralPao);
+
+    system("pause");
+    return(0);
+}
