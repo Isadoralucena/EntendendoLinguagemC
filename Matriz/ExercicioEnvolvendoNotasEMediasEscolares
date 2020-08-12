@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void){
+    const int bimestresAnuais=4;
+    const int numeroDeAlunos=4;
+    float notasDosAlunos[numeroDeAlunos][bimestresAnuais];//Matriz relacionada com as notas bimestrais dos alunos
+    float mediasDosAlunos[numeroDeAlunos];//Vetor relacionado com as médias das notas totais
+    float media=0;
+
+    printf("Insira as 4 notas do aluno 1:\n");
+    for(int aluno=0;aluno<numeroDeAlunos;aluno++){//Loop relacionado com o número de alunos
+        for(int notas=0;notas<bimestresAnuais;notas++){//Loop relacionado com o número de bimestres
+            scanf("%f",&notasDosAlunos[aluno][notas]);
+            media+=notasDosAlunos[aluno][notas];//Soma as notas do aluno
+        }
+        mediasDosAlunos[aluno]=media/bimestresAnuais;//Faz a média de cada aluno de acordo com sua posição
+        media=0;//A variável media é zerada para o próximo aluno
+        printf("Insira as 4 notas do aluno %i:\n", aluno+2);//É uma mensagem "futura" para o próximo loop
+    }
+
+    for(int aluno=0;aluno<numeroDeAlunos;aluno++){//Loop de exibição das médias
+        printf("A media do aluno %i eh %.2f\n", aluno+1, mediasDosAlunos[aluno]);
+        //As médias são baseadas de acordo comas posições dos alunos
+    }
+    system("pause");
+    return 0;
+}
