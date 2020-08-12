@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void){
+    void funcaoPrintf(int x, int vetor[]);
+    int x=10;
+    int vetor[3]={10};//O primeiro vetor valerá 10
+    funcaoPrintf(x, vetor);//Chamando
+    printf("Variavel int na funcao principal = %i\n", x);
+    printf("Vetor na funcao principal = %i\n", vetor[0]);
+    system("pause");
+    return 0;
+}
+void funcaoPrintf(int x, int vetor[]){
+    x=x+10;//O "x" aqui será uma cópia, caso não se queira isso, retornar ele
+    vetor[0]=20;//O vetor não será uma cópia
+    printf("Variavel int na funcao printf = %i\n", x);
+    printf("Vetor na funcao printf = %i\n", vetor[0]);
+}
