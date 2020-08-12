@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main(void){
+
+    char x[100];
+
+    FILE *file=fopen("D:\\C\\Manipulação de arquivos de texto\\Arquivo.txt","r");
+
+    int i=0;
+    while((x[i]=fgetc(file)) != EOF){//EOF significa final de arquivo(end of file)
+        ++i;
+    }
+
+    x[i]='\0';//Atribuindo o caractere nulo finalizador de strings
+
+    printf("%s",x);
+
+    getchar();
+    return 0;
+}
