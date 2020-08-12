@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+//Função principal sem retorno
+void main(){
+
+    //Definindo variáveis
+    int a = 10;
+
+    //Conectivo lógico E (AND), se uma comparação for falsa, não entra no bloco
+    if(a > 5 && a > 15){
+        printf("A variavel a esta entre 5 e 15");
+    }
+
+    //Conectivo lógico OU (OR), se uma comparação for verdadeira, já entra no bloco
+    if(a > 5 || a < 15){
+        printf("\nA variavel a eh maior que 5 ou 15");
+    }
+
+    //Misturando conectivos
+    if((a > 5 && a < 15)|| a == 20){
+        printf("\nA variavel a esta entre 5 e 15 ou ela vale 20");
+    }
+
+    //Pausa o programa após executar
+    system("pause");
+
+}
