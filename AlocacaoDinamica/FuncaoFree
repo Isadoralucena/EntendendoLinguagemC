@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <stdlib.h>//Permite o uso das funções: malloc, calloc, realloc, free
+
+int main(void){
+
+    int *p=(int *)malloc(sizeof(int));
+
+    *p=1000;//Se não for declarado nenhum valor, o ponteiro valerá o que estiver no lixo da memória RAM
+
+    printf("%i",*p);//Valor
+
+    //A função free libera o espaço de memória alocado, mas o lixo de memória continua
+    free(p);
+
+    getchar();
+    return 0;
+}
