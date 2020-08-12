@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+main(){
+
+    int a = 10, b = 20, c = 30, d = 40, e = (a + b + c + d)/4;
+
+    setlocale(LC_ALL,"portuguese");
+
+    printf("A média dos valores informados é %i", e);
+
+    return(0);
+
+    system("pause");
+}
