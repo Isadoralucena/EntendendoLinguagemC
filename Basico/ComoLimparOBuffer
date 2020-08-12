@@ -1,0 +1,37 @@
+#include <stdio.h>
+
+int main(void){
+
+    void limparBuffer(void);
+
+    //Buffer é um local temporário na memória que armazena dados até encher ou receber um comando de liberação desses
+    //Ele pode estourar e acabar atrapalhando na hora de compilar então limpa-se ele para uma melhor resolução final
+    char a,b,c;
+
+    a=getchar();
+    //fflush(stdin);///Não funciona em alguns compiladores pois o parâmetro da função fflush é de output, não input(stdin)
+    //setbuf(stdin,NULL);//Não funciona em alguns compiladores
+    limparBuffer();
+
+    b=getchar();
+    //fflush(stdin);///Não funciona em alguns compiladores pois o parâmetro da função fflush é de output, não input(stdin)
+    //setbuf(stdin,NULL);//Não funciona em alguns compiladores
+    limparBuffer();
+
+    c=getchar();
+    //fflush(stdin);//Não funciona em alguns compiladores pois o parâmetro da função fflush é de output, não input(stdin)
+    //setbuf(stdin,NULL);//Não funciona em alguns compiladores
+    limparBuffer();
+
+    //A tecla enter encheu o buffer
+    printf("%c",a);
+    printf("%c",b);
+    printf("%c",c);
+
+    return 0;
+}
+void limparBuffer(void){
+    char c;
+    while((c=getchar()) != '\n' && c != EOF){//getchar vai ler o que está no buffer enquanto não achar '\n' e EOF, limpando
+    }
+}
