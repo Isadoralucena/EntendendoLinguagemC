@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main(void){
+
+    char x[100];
+
+    //A função fgets pode funcionar tanto como fprintf quanto como fscanf
+    //Ela recebe 3 argumentos: a string a ser lida, o limite máximo de caracteres a serem lidos e o ponteiro para FILE
+    fgets(x,100,stdin);//stdin representa a entrada padrão de dados, e no caso do pc, essa entrada é o teclado
+    //Só pode ser lido 99 caracteres, por causa do '\0'
+    printf("%s",x);
+
+    //Já a função freopen redireciona o ponteiro informado(stdin) para o endereço do arquivo copiado
+    freopen("D:\\C\\Manipulação de arquivos de texto\\Arquivo.txt","r",stdin);
+
+    fgets(x,100,stdin);//Aqui stdin vai automaticamente ler o que está em Arquivo.txt
+    printf("\n%s",x);
+
+    getchar();
+    return 0;
+}
