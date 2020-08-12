@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main(void){
+
+    int vetor[3]={1,2,3};
+    int *ponteiro=vetor;//Não é necessário &
+    printf("%i",*ponteiro);//O ponteiro aponta para o endereço de memória do primeiro vetor
+
+    ponteiro=&vetor[2];//O ponteiro é forçado a apontar ao endereço de memória da posição 2
+    printf("\n%i",ponteiro);
+
+    printf("\n%p",ponteiro);//Forma correta de exibir o endereço de memória(vetor[2]) que o ponteiro está apontando
+
+    getchar();
+    return 0;
+}
