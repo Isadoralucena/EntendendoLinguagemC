@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int somarVetor(int vetor[],const int tamanho){
+    int soma=0;//A cada vez que um membro do vetor for lido, seu valor será adicionado a soma
+    int *ponteiro;
+    int *const finalVetor = vetor + tamanho;//finalVetor está apontando para o endereço da primeira posição de vetor + 10,
+
+    for(ponteiro=vetor;ponteiro<finalVetor;++ponteiro){//Endereço
+        soma+= *ponteiro;//Valor
+    }
+    return soma;
+}
+int main(void){
+    int somarVetor(int vetor[],const int tamanho);
+    int vetor[10]={5,5,5,5,5,5,5,5,5,5};
+
+    printf("A soma dos membros de vetor = %i", somarVetor(vetor,10));//Chamando
+
+    getchar();
+}
