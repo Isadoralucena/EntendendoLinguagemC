@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>//Permite o uso das funções: malloc, calloc, realloc, free
+
+struct y{int a;int b;int c};
+
+int main(void){
+    //Na alocação dinâmica pode-se alocar espaços durante a execução de um programa
+    //Permitindo que o espaço em memória seja alocado apenas quando necessário
+    //Podendo ainda aumentar ou até diminuir a quantidade de memória alocada
+    int x;
+    double y;
+    int vetor[10];
+    struct y estrutura;
+
+    //O operador sizeof informa o tamanho em bytes de qualquer dado, podendo variar esse número de acordo com cada compilador
+    //printf("%li",sizeof(y));
+    //printf("%li",sizeof(double));
+    //printf("%li",sizeof(vetor));//int = 4, logo int vetor[10]=40, pois 4*10=40
+    printf("%li",sizeof(estrutura));//3*4=12(se os membros de uma struct forem de tipos diferentes, o sizeof dela virá alterado)
+
+    getchar();
+    return 0;
+}
