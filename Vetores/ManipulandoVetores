@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+void main(){
+
+    float notas[5];
+    float total = 0;
+    float media = 0;
+    printf("Insira 5 notas:\n");
+    for(int i=0;i<5;i++){//Loop for para atribuição das posições do vetor notas
+        //printf("%i\n",notas[i]);
+        scanf("%f",&notas[i]);
+    }
+    for(int i=0;i<5;i++){//Loop for para somar as notas
+        total+=notas[i];
+    }
+    media = total/5;
+    printf("A media do aluno eh: %f", media);
+    system("pause");
+}
+
