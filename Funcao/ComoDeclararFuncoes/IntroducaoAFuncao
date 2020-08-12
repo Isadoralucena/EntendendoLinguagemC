@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <stdio.h>
+
+int main(void){
+    float calcularAreaRetangulo(float base, float altura);
+    float area=calcularAreaRetangulo(10.0,20.0);//Chamando a função
+    printf("%f",area);
+    return 0;
+    system("pause");//Pausa o programa após executar
+}
+//"float"= o que a função vai retornar
+//"calcularAreaRetangulo"= o nome dela
+//"(float base, float altura)"= o que receberá ao ser chamada
+float calcularAreaRetangulo(float base, float altura){
+    float area=base*altura;
+    return area;//"area" será retornado para a função principal
+}
