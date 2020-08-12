@@ -1,0 +1,11 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void){
+    int x=16;
+    int y=3;
+    float resultado= x/y;
+    printf("%f\n", resultado);//A linguagem entende que devido x e y serem inteiros o resultado também sera
+    resultado=(float)x/y;
+    printf("%f\n", resultado);//Casting
+}
