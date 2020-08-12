@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void){
+    int idade;
+    printf("Digite sua idade: ");
+    scanf("%i",&idade);
+    //&& = e(só será verdade se tudo for verdadeiro)
+    //|| = ou(só será verdade se tiver uma condição verdadeira)
+    if(idade>= 20 && idade<=40){
+        printf("Sua idade eh maior ou igual a 20 e menor ou igual a 40");
+    }else{
+        printf("Sua idade eh menor que 20 ou maior que 40");
+    }
+
+    system("pause");
+    return 0;
+}
+
