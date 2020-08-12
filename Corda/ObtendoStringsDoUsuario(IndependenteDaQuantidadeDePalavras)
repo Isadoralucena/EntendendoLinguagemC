@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void){
+    char linha[100];
+    char caractere;
+    int i = 0;
+    do{
+        caractere = getchar();//A função "getchar()" pega as letras que o usuário digitou e atribui a "caractere"(como um "scanf")
+        linha[i] = caractere;
+        i++;
+    }while(caractere!='\n');//O loop vai ser interrompido quando o usuário apertar o "enter"
+    linha[i-1] = '\0';//Substitui o '\n' por '\0'
+    printf("%s\n",&linha);
+    system("pause");
+    return 0;
+}
