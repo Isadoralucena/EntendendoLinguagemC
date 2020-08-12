@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+main(){
+
+    float a = 2.541, b = 9.673, c = a * b;
+
+    setlocale(LC_ALL,"portuguese");
+
+    printf("O valor %.2f multiplicado por %.2f é igual a %.2f", a, b, a * b);
+
+    //Ou
+    printf("\nO valor %.2f multiplicado por %.2f é igual a %.2f", a, b, c);
+
+    return(0);
+
+    system("pause");
+}
