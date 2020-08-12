@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main(void){
+
+    //Getchar é uma função de entrada, ou seja, lê um caractere de cada vez da entrada do console(geralmente o teclado
+    //Não há parâmetro entre parênteses
+    char x[10];
+
+    //x[0]=getchar();
+    //printf("%c",x[0]);
+
+    int i=0;
+    while((x[i]=getchar()) != '\n' && i<8){//Será lido 9 caracteres
+        ++i;
+    }
+
+    x[++i]='\0';//Atribuindo o caractere nulo
+
+    printf("%s",x);
+
+    //Putchar é uma função de saída, ou seja, exibe um caractere de cada vez na saída do console(geralmente o monitor)
+    char z;
+    while((z=getchar()) != '\n'){//O que será digitado pelo getchar
+        putchar(z);//Será replicado pelo putchar
+    }
+
+    return 0;
+}
