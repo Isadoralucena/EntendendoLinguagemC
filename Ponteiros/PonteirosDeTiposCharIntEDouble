@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main(void){
+    int x=10;
+    double y=20.50;
+    char z='a';
+
+    int *pX;
+    pX=&x;//No caso de *pX=&x, o valor que o ponteiro aponta será igual ao endereço de memória dele
+    //Outro modo de criar esse ponteiro é "int *pX=&x;"
+    double *pY=&y;
+    char *pZ=&z;
+
+    printf("Endereco de x = %i e valor = %i\n",pX, *pX);
+    printf("Endereco de y = %i e valor = %f\n",pY, *pY);
+    printf("Endereco de z = %i e valor = %c\n",pZ, *pZ);
+
+    int *resultado;
+    resultado=6422004;//Mesma coisa que resultado=&x;
+    printf("Valor de x = %i\n",*resultado);
+
+    double soma= *pX + *pY;//Mas não é possível somar os endereços de memória, por exemplo, "double soma= pX + pY;"
+    printf("Soma entre %i e %f = %f",*pX,*pY,soma);
+
+    getchar();
+    return 0;
+}
