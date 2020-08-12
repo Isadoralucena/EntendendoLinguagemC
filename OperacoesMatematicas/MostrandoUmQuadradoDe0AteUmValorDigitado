@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+void main(){
+    setlocale(LC_ALL,"portuguese");
+    int n, i = 0;
+    printf("Digite um número: ");
+    scanf("%i", &n);
+    while(i!=n){
+        printf("\nO quadrado de %i é %i", i, i*i);
+        i=i+1;
+    }
+    printf("\nO quadrado de %i é %i", i, i*i);
+    system("pause");
+}
