@@ -1,0 +1,61 @@
+#include <stdio.h>//Biblioteca para as funções básicas
+#include <stdlib.h>//Biblioteca para o "system("pause")"
+#include <stdbool.h>//Biblioteca para lidar com as variáveis booleanas(sem essa biblioteca, elas são reconhecidas como "_Bool")
+#define NUMERODEDEFINICOES 7//Constante que representa a quantidade de definições/número de palavras do mini dicionário
+
+//O "mini dicionário" poderá ter palavras com até 19 caracteres(sem considerar o '\0' nesse número), e suas definições, 49
+struct gdicionario{char palavra[20];char definicao[50]};
+
+//A função retornará um valor de tipo booleano
+bool compararStrings(const char palavra1[],const char palavra2[]){
+    int i=0;
+    //Verificando a igualdade das letras uma por uma, até atingir '\0'(no caso de strings iguais)
+    while(palavra1[i]==palavra2[i] && palavra1[i]!='\0' && palavra2[i]!='\0'){
+        i++;
+    }
+    if(palavra1[i]=='\0' && palavra2[i]=='\0'){//Se atingirem '\0', então as strings são iguais
+        return true;
+    }else{//Mas se as letras forem diferentes(não atingirem o '\0'), então as strings são diferentes e irão return false
+        return false;
+    }
+}
+
+//A função retornará um valor de tipo inteiro
+int procurarStrings(const struct gdicionario lingua[],const char procurar[],const int numDePalavras){
+    //Para usar uma função dentro de outra, é necessário declará-la
+    bool compararStrings(const char palavra1[],const char palavra2[]);
+
+    int i=0;
+    while(i<numDePalavras){
+        //"procurar" é o que o usuário vai digitar, e "lingua[i].palavra" representa as palavras do gdicionario
+        if(compararStrings(procurar,lingua[i].palavra)){//Chamando
+            return i;//Se a palavra do usuário estiver entre as do mini dicionário, return i(a posição da palavra no gdicionario)
+        }else{
+            i++;
+        }
+    }
+    return -1;//Se a palavra do usuário não estiver entre as do mini dicionário, return -1
+}
+
+//Função principal
+int main(void){
+    int procurarStrings(const struct gdicionario lingua[],const char procurar[],const int numDePalavras);
+    char palavra[20]={'\0'};//Todos os caracteres serão nulos
+    int resultadoDaPesquisa;
+
+    const struct gdicionario portugues[NUMERODEDEFINICOES]={{"pao","Comida de farinha"},{"mortadela","Comida de carne"},{"feijao","Semente nutritiva"},
+    {"queijo","Aperitivo de leite"},{"omelete","Comida com ovos"},{"pipoca","Milho estourado"},{"espinafre","Folha nutritiva"}};
+
+    printf("Digite uma palavra: ");
+    scanf("%s",palavra);//Reconhecendo a palavra que o usuário quer procurar no mini dicionário
+
+    resultadoDaPesquisa=procurarStrings(portugues,palavra,NUMERODEDEFINICOES);//Chamando
+    if(resultadoDaPesquisa != -1){
+        printf("%s\n",portugues[resultadoDaPesquisa].definicao);//Exibindo a definição da palavra procurada pelo usuário(de acordo com sua posição)
+    }else{
+        printf("Palavra nao encontrada");
+    }
+
+    system("pause");
+    return 0;
+}
