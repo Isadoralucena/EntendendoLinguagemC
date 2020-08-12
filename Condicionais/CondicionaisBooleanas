@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+
+//Função principal do programa sem retorno
+void main(){
+
+    //Definindo variáveis
+    bool a = true, b = false;
+
+    //Se a for verdadeiro
+    if(a){
+        printf("a eh verdadeiro");
+    }
+
+    //Comparando b
+    if(b){
+        printf("\nb eh verdadeiro");
+    }else{
+        printf("\nb eh falso");
+    }
+
+    //Comparando uma falsidade
+    if(!b){
+        printf("\nb eh falso");
+    }
+
+    //Pausa o programa após executar
+    system("pause");
+
+}
