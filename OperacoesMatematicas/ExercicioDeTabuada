@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+main(){
+    int a, b;
+
+    setlocale(LC_ALL,"portuguese");
+    printf("Que número inteiro você quer que seja multiplicado?");
+    scanf("%i", &a);
+
+    for(b=0; b <= 10; b++){
+    //Tem que colocar b++ obrigatoriamente se quiser que a repetição seja progressiva, no caso de regressiva colocar b--
+        printf("\n%i x %i= %i", a, b, a * b);
+    }
+    return(0);
+    system("pause");
+
+}
