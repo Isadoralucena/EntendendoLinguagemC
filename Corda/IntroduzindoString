@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+void main(){
+
+    //String = conjunto de caracteres
+    //Para representar uma string em C deve-se criar um vetor de caracteres/vetor do tipo char
+    //O número em colchetes representa o tanto de caracteres que poderâo ser digitados
+    //Precisa-se colocar um caracter a mais para finalizar o final da string
+    char nome[50];
+
+    printf("Digite seu nome: ");
+    scanf("%s", &nome);
+    printf("Seu nome eh: %s", nome);
+    system("pause");
+}
