@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void){
+    //Struct = variável que contém diversas outras variáveis de tipos de dados diferentes
+    //Definindo
+    struct horario{int horas; int minutos; int segundos; char letra; float teste};
+
+    //Declarando uma variável de tipo horario
+    struct horario agora;
+    agora.horas=15;
+    agora.minutos=17;
+    agora.segundos=30;
+
+    printf("%i:%i:%i\n", agora.horas, agora.minutos, agora.segundos);
+
+    //Declarando outra variável de tipo horario
+    struct horario depois;
+    depois.horas=agora.horas+10;
+    depois.minutos=agora.minutos;
+    depois.teste=50.55/123;
+    depois.letra='a';
+
+    printf("%i\n", depois.horas);
+    printf("%i\n", depois.minutos);
+    printf("%f\n", depois.teste);
+    printf("%c\n", depois.letra);
+    system("pause");
+    return 0;
+}
