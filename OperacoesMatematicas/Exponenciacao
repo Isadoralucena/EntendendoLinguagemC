@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <math.h>//Exponenciação
+
+main(){
+
+    float pi = 3.14;
+    int a, raio = 2, expoente = 2;
+
+    setlocale(LC_ALL,"portuguese");
+
+    a = pow(raio,expoente);
+
+    printf("A área da circufêrencia é: %.2f", a * pi);
+    return(0);
+
+    system("pause");
+}
