@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main(void){
+
+    char x[100];
+
+    FILE *file=fopen("D:\\C\\Manipulação de arquivos de texto\\Arquivo.txt","r");
+
+    fgets(x,100,file);
+    printf("%s\n",x);
+
+    //file vai ser redirecionado a apontar no Arquivo2
+    freopen("D:\\C\\Manipulação de arquivos de texto\\Arquivo2.txt","r",file);
+    fgets(x,100,file);
+    printf("%s\n",x);
+
+    getchar();
+    return 0;
+}
