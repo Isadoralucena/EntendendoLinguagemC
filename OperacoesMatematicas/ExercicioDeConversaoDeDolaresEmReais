@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+main(){
+    float dolar, quantidade;
+    setlocale(LC_ALL,"portuguese");
+    printf("Digite o valor do dólar:");
+    scanf("%f", &dolar);
+    printf("Digite a quantidade para ser convertida em reais: ");
+    scanf("%f", &quantidade);
+    printf("O último valor digitado em reais é = %6.2f", quantidade*dolar);
+
+    return(0);//O que eu vou retomar para a função "main"
+    system("pause");
+}
+
