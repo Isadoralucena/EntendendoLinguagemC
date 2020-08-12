@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>//Permite o uso das funções: malloc, calloc, realloc, free
+
+int main(void){
+    //malloc = memory allocation
+    //Ela aloca um espaço de memória e retorna um ponteiro/endereço de memória de tipo genérico, void
+    //Mas com o casting "(int *)", ela retorna um valor do mesmo tipo do seu ponteiro, para o início do espaço de memória alocado
+    //int *p(int *)malloc(4);//4 bytes serão alocados(não é comum)
+    int *p=(int *)malloc(sizeof(int));//(mais comum)
+    //int *p=(int *)malloc(10 * sizeof(int));//No caso de um vetor com 10 posições(mas a função calloc é específica para isso)
+
+    *p=1000;//Se não for declarado nenhum valor, o ponteiro valerá o que estiver no lixo da memória RAM
+    printf("%i",*p);//Valor
+
+    //Se a função malloc não tiver onde alocar um espaço de memória, será retornado NULL, então para controlar isso pode-se fazer:
+    if(malloc==NULL){
+        printf("malloc nao funcionou");
+    }
+
+    getchar();
+    return 0;
+}
