@@ -1,0 +1,47 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>//Biblioteca para o tipo de dado boleano
+
+void main () {
+
+    //Definindo variáveis com números inteiros
+    int a;
+    //Números co vírgulas
+    float b;
+    //Variáveis com letras
+    char c;
+    //Variáveis boleanas com verdadeiro e falso
+    bool d;
+
+    //Números com vírgulas maiores que float
+    double e;
+
+    //Passando valores
+    a = 5;
+    b = 8.5;
+    c = 'a';
+    d = true; // true = 1, false = 0
+    e = 2.4;
+
+    //Escrevendo na Tela
+    printf("\n O valor de a = %d", a);
+    printf("\n O valor de b = %.1f", b);
+    printf("\n O valor de c = %c", c);
+    printf("\n O valor de d = %d", d);
+    printf("\n O valor de e = %Lf", e);//Long float
+
+    //Lendo Valores e Escrevendo na tela
+    scanf("%d", &a);
+    printf("\n O valor de a = %d", a);
+    scanf("%f", &b); //Após o %f colocar . e a quantidade de casas decimais que se quer aparecendo no programa
+    printf("\n O valor de b = %.1f", b);
+    scanf(" %c", &c); //Aqui é necessário um espaço antes do %c
+    printf("\n O valor de c = %c", c);
+    scanf("%d", &d);
+    printf("\n O valor de d = %d\n", d);
+    scanf("%Lf",&e);
+    printf("\n O valor de e = %Lf\n", e);
+
+    //Pausando
+    system("pause");
+}
