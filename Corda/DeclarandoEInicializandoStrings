@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+void main(){
+    //Formas incorretas(Precisa-se colocar um caracter a mais para finalizar o final da string)
+    //char palavra[6]={'B','r','a','s','i','l'};
+    //char palavra[]={'B','r','a','s','i','l'};
+
+    //Formas corretas e eficázes
+    //char palavra[7]={'B','r','a','s','i','l'};
+    //char palavra[7]={"Brasil"};
+    //char palavra[]={"Brasil"};
+    char palavra[]="Brasil";
+
+    printf("%s", palavra);
+    system("pause");
+}
