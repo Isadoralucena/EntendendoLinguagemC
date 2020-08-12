@@ -1,0 +1,24 @@
+#include <stdio.h>//Biblioteca para as funções básicas
+#include <stdlib.h>//Biblioteca para o system("pause")
+#define VALORQUALQUER 10//Declarando constante
+
+//A compilação em C começa com um pré-processamento que cuida das linhas do programa que começam com #
+//Ele é realizado por um módulo do compilador conhecido como pré-processador, ou pré-compilador
+//O espaçamento na estrutura #define precisa ser preciso, porque senão dará erro
+void main (){
+
+    //Imprime na tela
+    printf("%i", VALORQUALQUER);
+
+    int i;
+
+    //Contagem até 10
+    for(i = 1; i <= VALORQUALQUER; i++){
+        printf("\n%d", i);
+    }
+
+    //Pausa o programa após executar
+    system("pause");
+
+}
+
