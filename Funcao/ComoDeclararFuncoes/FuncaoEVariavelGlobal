@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int gvariavelGlobal=2;
+//O "g" antes serve para identificar a variável global, já que ela consegue alterar todo um programa se for mudada
+
+int main(void){
+    void teste(void);
+    printf("Variavel global = %i\n", gvariavelGlobal);
+    teste();
+    teste();
+    return 0;
+}
+
+void teste(void){
+    int variavelLocalAutomatica=2;
+    variavelLocalAutomatica*=2;//O mesmo que "variavelLocalAutomatica = variavelLocalAutomatica*2"
+    static int variavelLocalEstatica=2;//Variável que não é recriada a cada vez que a função é chamada
+    variavelLocalEstatica*=2;
+    printf("Local Automatica = %i\n",variavelLocalAutomatica);
+    printf("Local Estatica = %i\n",variavelLocalEstatica);
+    gvariavelGlobal*=2;
+    printf("Variavel global = %i\n", gvariavelGlobal);
+    return;
+}
+
