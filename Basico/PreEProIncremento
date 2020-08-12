@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main(void){
+
+    int x=1;
+    int y=0;
+
+    y = x++;//Pós incremento(y = x e depois x = x + 1)
+    y = ++x;//Pré incremento(x = x + 1 e depois y = x)
+    y = x--;//Pós decremento
+    y = --x;//Pré decremento
+
+    printf("x = %i",x);
+    printf("\ny = %i",y);
+
+    getchar();
+    return 0;
+}
