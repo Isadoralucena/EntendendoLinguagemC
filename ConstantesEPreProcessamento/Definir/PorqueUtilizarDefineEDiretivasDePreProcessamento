@@ -1,0 +1,21 @@
+#include <stdio.h>
+#define NUMERO_MAXIMO_DE_ALUNOS 1000
+//Com #define fica mais fácil modificar uma variável que vai ser muito usada
+
+void umaFuncao(void){
+    printf("%i\n",NUMERO_MAXIMO_DE_ALUNOS);
+}
+void umaOutraFuncao(void){
+    printf("%i\n",NUMERO_MAXIMO_DE_ALUNOS);
+}
+int main(void){
+    void umaOutraFuncao(void);
+    void umaFuncao(void);
+
+    printf("%i\n",NUMERO_MAXIMO_DE_ALUNOS);
+    umaFuncao();//Chamando
+    umaOutraFuncao();//Chamando
+
+    getchar();
+    return 0;
+}
