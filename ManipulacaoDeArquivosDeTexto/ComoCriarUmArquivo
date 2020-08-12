@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main(void){
+    //Um arquivo é um contêiner em dispositivos de armazenamento do computador usados ​​para armazenar dados
+    //Quando um programa é finalizado, todos os dados são perdidos
+    //Mas ao armazenar o programa em um arquivo seus dados serão preservados mesmo após ele encerrar
+    //É prático se você precisar inserir um grande número de dados, pois pode acessá-los facilmente usando só alguns comandos
+    //E ainda é possível mover seus dados facilmente de um computador para outro sem nenhuma alteração
+
+    //Para criar um arquivo é necessário antes criar um ponteiro que aponte para uma variável de tipo FILE(definida em stdio.h)
+    FILE *ponteiro;
+
+    //A função fopen() é a responsável em fazer com que ponteiro aponte em um arquivo
+    //Ela recebe como parâmetros o nome do arquivo a ser aberto e o tipo de abertura a ser realizado
+    //O arquivo vai ser criado no mesmo lugar do código fonte pois não está especificado nenhum diretório de outro lugar
+    ponteiro=fopen("Nome.txt","w");
+    //"w" vem de write(escrever), e é um tipo de abertura que cria um arquivo em modo texto
+    //Mas caso o arquivo já exista, ele é sobrescrito(o arquivo anterior de mesmo nome é apagado)
+
+    //A função fprintf armazena dados em um arquivo
+    fprintf(ponteiro,"Maria");
+
+    //Depois de aberto, é necessário fechar o arquivo
+    fclose(ponteiro);
+
+    return 0;
+    getchar();
+}
