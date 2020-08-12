@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int main(void){
+
+    int vetor[3]={1,2,3};
+    int *ponteiro=vetor;
+    printf("\n%p",ponteiro);//O ponteiro aponta para o endereço de memória do primeiro vetor
+
+    ponteiro=&vetor[1];//O ponteiro é forçado a apontar ao endereço de memória da posição 1
+    printf("\n%p",ponteiro);
+
+    ponteiro=&vetor[2];//O ponteiro é forçado a apontar ao endereço de memória da posição 2
+    printf("\n%p",ponteiro);
+
+    ponteiro=&vetor[0];
+    ++ponteiro;//Endereço de memória
+    printf("\n%i",*ponteiro);//Aparecerá o valor do vetor[1], devido a ++ponteiro
+
+    ++ponteiro;
+    printf("\n%i",*ponteiro);//Aparecerá o valor do vetor[2], devido a ++ponteiro
+
+    *(ponteiro-2)=10;//O parêntese representa o vetor que eu quero acessar, o * que eu me refiro ao seu valor, e =10, atribuição
+    printf("\n%i",vetor[0]);
+    printf("\n%i",*ponteiro);//Mas a alteração de valor não muda para quem o vetor aponta
+
+    getchar();
+    return 0;
+}
+
