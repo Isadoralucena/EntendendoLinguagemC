@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+void main(void){
+    //short é um modificador de tipo que diminui o espaço necessário para guardar a variável(só pode ser usado com int)
+
+    short x = 2147483647;//Overflow(número muito grande para ser armazenado nesse tipo de variável)
+    short int y = -2147483648;//Underflow(número muito pequeno para ser armazenado nesse tipo de variável)
+
+    int a = 2147483647;//Limite de int +
+    int b = -2147483648;//Limite de int -
+
+    printf("%i\n",x);
+    printf("%i\n",y);
+
+    getchar();
+}
