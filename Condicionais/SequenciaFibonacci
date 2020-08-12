@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+void main(){
+    setlocale(LC_ALL,"portuguese");
+    int t1=0, t2=1, r, c=0;
+    printf("TERMO %i\nDeseja continuar a sequência? Digite '0' para SIM ou outro valor para NÃO: ", t1);
+    scanf("%i", &c);
+    if(c==0){
+        printf("TERMO %i", t2);
+    }else{
+        printf("\nSEQUÊNCIA FINALIZADA!");
+    }
+    printf("\nDeseja continuar a sequência? Digite '0' para SIM ou outro valor para NÃO: ");
+    scanf("%i", &c);
+
+     if(c==0){
+        while(c==0){
+            r= t1+t2;
+            printf("TERMO %i\nDeseja continuar a sequência? Digite '0' para SIM ou outro valor para NÃO: ", r);
+            scanf("%i", &c);
+            t1=t2;
+            t2=r;
+        }
+     }else{}
+    printf("SEQUÊNCIA FINALIZADA!");
+    system("pause");
+}
