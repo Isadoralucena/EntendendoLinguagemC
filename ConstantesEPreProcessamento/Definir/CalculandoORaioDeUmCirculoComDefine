@@ -1,0 +1,21 @@
+#include <stdio.h>
+#define PI 3.14
+#define NULO 0
+
+//A função retornará um valor de tipo double
+double areaCirculo(double raio){
+    return PI*raio * raio;
+}
+int main(void){
+    double areaCirculo(double raio);
+    double r;
+    int i=3;
+    while(i != NULO){
+        printf("Digite o raio do circulo: ");
+        scanf("%Lf",&r);
+        printf("A area do circulo eh %Lf\n",areaCirculo(r));
+        --i;
+    }
+    getchar();
+    return 0;
+}
