@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main(void){
+    void testeVariavel(int x);
+    void testePonteiro(int *pX);
+
+    int teste=1;
+    int *pTeste=&teste;//Esse ponteiro está apontando para a variável teste
+
+    //testeVariavel(teste);
+    testePonteiro(pTeste);//A função quer receber um endereço de memória para manipular o seu valor
+
+    printf("%i\n",teste);
+
+    getchar();
+    return 0;
+}
+//A função não retornará nada(void)
+void testeVariavel(int x){//x é uma cópia
+    //Essa função gasta muita memória devido a criação de cópias
+    ++x;
+    printf("%i\n",x);
+}
+//A função não retornará nada(void)
+void testePonteiro(int *pX){//O endereço de memória de *pX não é uma cópia
+    //O uso de ponteiros diminui a sobrecarga na memória
+    ++*pX;
+}
