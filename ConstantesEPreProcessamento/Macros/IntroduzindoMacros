@@ -1,0 +1,16 @@
+#include <stdio.h>//Biblioteca para as funções básicas
+
+#define PI 3.14//Constante com #define
+#define DOIS_PI 2*PI//Constante com #define
+#define AREA_CIRCULO(raio) raio*raio*PI//Macro
+//Macros/Microinstruções são recursos de pré-compilação (pré-processamento)
+//Que permitem a criação de estruturas que serão substituídas antes do código ser compilado
+
+int main(void){
+    printf("%f\n",PI);
+    printf("%f\n",DOIS_PI);
+    printf("%f\n",AREA_CIRCULO(10));//Essa macro recebeu como raio, 10
+
+    getchar();
+    return 0;
+}
