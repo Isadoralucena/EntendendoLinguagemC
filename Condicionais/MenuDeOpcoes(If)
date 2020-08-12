@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+//Função principal do programa sem retorno
+void main(){
+    //Menu é um programa que interaje com o usuário
+    //Definindo variáveis
+    int a;
+
+    while(a < 1 || a > 3){
+    //Interface de menu
+    printf("\nEscolha uma opcao: ");
+    printf("\n1- opcao 1 ");
+    printf("\n2- opcao 2 ");
+    printf("\n3- opcao 3 ");
+
+    //Lendo
+    scanf("%i",&a);
+
+    //Código com if
+    if(a == 1){
+           printf("\nOpcao escolhida: 1");
+    }else if(a == 2){
+        printf("\nOpcao escolhida: 2");
+    }else if(a == 3){
+        printf("\nOpcao escolhida: 3");
+    }else{
+        printf("\nOpcao invalida");
+    }
+    }
+}
