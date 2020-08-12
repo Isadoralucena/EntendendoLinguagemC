@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+void main(){
+    void concatenarStrings(char string1[], int tamanho1, char string2[], int tamanho2, char string3[]);
+    char palavra1[]={'p','a','o',' '};
+    char palavra2[]={'m','o','r','t','a','d','e','l','a'};
+    char novaPalavra[13];//Representa o total de caracteres da palavra1+palavra2
+
+    concatenarStrings(palavra1,4,palavra2,9,novaPalavra);
+    int i;
+    for(i=0;i<13;i++){
+        //"%c" é diferente de "%s", e isso influência no número entre colchetes de uma string/conjunto de caracteres
+        printf("%c", novaPalavra[i]);//O printf está lendo caractere por caractere, por isso novaPalavra tem "[13]", e não "[14]"
+    }
+    printf("\n");
+    system("pause");
+}
+void concatenarStrings(char string1[], int tamanho1, char string2[], int tamanho2, char string3[]){
+    int i,j;
+    for(i=0;i<tamanho1;i++){
+        string3[i]=string1[i];
+    }
+
+    for(j=0;j<tamanho2;j++){
+        string3[tamanho1+j]=string2[j];
+        //"tamanho1+ j" para considerar as letras anteriores, da "string1", e "string2", a partir do seu preenchimento
+    }
+}
