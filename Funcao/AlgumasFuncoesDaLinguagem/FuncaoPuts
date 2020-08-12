@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main(void){
+
+    //A função recebe como parãmetro um vetor de caracteres e joga-o no stdout(console)
+    //Ela pula automaticamente uma linha(é da função)
+    puts("Mortadela");
+
+    char x[]="Pao";
+    puts(x);
+
+    getchar();
+    return 0;
+}
