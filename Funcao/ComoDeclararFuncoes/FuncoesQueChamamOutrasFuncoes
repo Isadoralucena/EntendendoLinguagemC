@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void){
+    float somaDeDigitos(float num1, float num2);
+    float a, b, soma;
+
+    printf("Digite dois numeros: ");
+    scanf("%f", &a);
+    scanf("%f",&b);
+    soma= somaDeDigitos(a,b);//Chamando a função
+    printf("A soma de %f com %f eh igual a %f", a, b, soma);
+
+    system("pause");
+    return 0;
+}
+float somaDeDigitos(float num1, float num2){
+    float valorAbsoluto(float x);
+    if(num1<0){
+        num1= valorAbsoluto(num1);//Chamando outra função
+    }
+    if(num2<0){
+        num2=valorAbsoluto(num2);//Chamando outra função
+    }
+    return num1+num2;//Retornando a soma de dois números absolutos(+)
+}
+float valorAbsoluto(float x){
+
+    return x*-1;
+}
