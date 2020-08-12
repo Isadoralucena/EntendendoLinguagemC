@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void){
+    void alfabetico(char variavel);
+    char nome[20];
+    printf("Digite uma palavra: ");
+    scanf("%s",nome);
+
+    int i=0;
+    while(nome[i]!='\0'){
+        alfabetico(nome[i]);//Chamando
+        i++;
+    }
+    system("pause");
+    return 0;
+}
+void alfabetico(char variavel){
+    if((variavel>='a' && variavel<='z') || (variavel>='A' && variavel<='Z')){//Letras maiúsculas e minúsculas são diferentes em C, ex.: 'a' != 'A'
+        printf("%c eh uma letra\n", variavel);
+    }else{
+        printf("%c nao eh uma letra\n", variavel);
+    }
+}
