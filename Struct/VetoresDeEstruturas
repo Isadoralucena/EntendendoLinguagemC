@@ -1,0 +1,13 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void){
+    //Definindo
+    struct horario{int hora;int minuto;int segundo};
+    struct horario teste [5]={{10,20,30},{40,50,60},{70,80,90},{100,110,120},{130,140,150}};
+    //Os valores atribuidos são atribuídos para as variáveis que estão na mesma ordem deles
+    int i;
+    for(i=0;i<5;i++){
+        printf("%i:%i:%i\n", teste[i].hora,teste[i].minuto,teste[i].segundo);
+    }
+}
