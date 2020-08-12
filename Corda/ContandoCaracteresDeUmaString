@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void){
+    int tamanhoString(char string[]);
+    char stringUsuario[20];
+
+    printf("Digite uma palavra(string): \n");
+    scanf("%s", &stringUsuario);
+    int num=tamanhoString(stringUsuario);//Chamando
+    printf("A string %s possui %i caracteres\n", stringUsuario, num);
+    system("pause");
+    return 0;
+}
+int tamanhoString(char string[]){
+    int numCaracteres=0;
+    while(string[numCaracteres]!= '\0'){
+    //'\0' significa caractere nulo, ou seja, é ele que finaliza uma string, sendo o \ insignificante na sua quantidade no []
+        ++numCaracteres;
+    }
+    ++numCaracteres;//Soma-se +1 para incluir o caractere nulo
+    return numCaracteres;
+}
