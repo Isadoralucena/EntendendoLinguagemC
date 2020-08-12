@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void){
+    char nome[30];
+    char sobrenome[20];
+
+    printf("Insira seu nome e sobrenome:\n");
+    scanf("%s%s",&nome,&sobrenome);
+
+    printf("%s %s\n",nome,sobrenome);
+    system("pause");
+    return 0;
+}
