@@ -1,0 +1,10 @@
+#include <stdio.h>//Biblioteca para as necessidades básicas
+#include <stdlib.h>//Biblioteca para o system("pause")
+
+//Função principal do programa, na qual não retorna nada(por causa do void)
+void main(void){
+    //"system("pause")" é uma função que pausa o programa após executar, mas não funciona em sistemas operacionais != windows
+    //Além de não funcionar em sistemas operacionais != windows, exige muita memória
+    system("pause");
+    //getchar(); é uma alternativa eficiente, maneira e multioperacional, incluída na bilioteca <stdio.h>
+}
