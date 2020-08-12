@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+//Função principal do programa sem retorno
+void main(){
+
+    //Definindo variáveis
+    int cont;
+
+    //Contando até 10
+    for(cont = 1; cont <= 10; cont++){
+        printf("\n%d", cont);
+    }
+
+    //Tabuada de 5
+    for(cont = 1; cont <= 10; cont++){
+        printf("\n5 x %d = %d", cont, 5 * cont);
+    }
+
+    //Contando de 2 em 2 até 10
+    for(cont = 0; cont <= 10; cont +=2){
+        printf("\n%d", cont);
+    }
+
+    //Contando regressivamente de 2 em 2 até 0
+    for(cont = 10; cont >= 0; cont -= 2){
+        printf("\n%d", cont);
+    }
+
+    //Pausa o programa após executar
+    system("pause");
+
+}
