@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int main(void){
+    //Ponteiro = uma variável capaz de armazenar um endereço de memória ou o endereço de outra variável
+
+    int x;//Em um espaço da memória do computador foi armazenado um lugar para ser depositado o valor int da variável x
+    x=10;//O lugar, referente a variável x, passou a atribuir 10
+
+    printf("%i\n",x);//Valor
+    printf("%i\n",&x);//Endereço de memória
+
+    int *ponteiro;//Criando um ponteiro, que está apontando para um valor inteiro
+    ponteiro=&x;//Definindo o endereço de memória, na qual o endereço aponta para o seu valor inteiro
+
+    printf("%i\n",*ponteiro);//Valor
+    printf("%i\n",ponteiro);//Endereço de memória
+
+    int a=5;
+    int b=a;
+    a=20;
+    printf("%i, %i\n",a,b);
+
+    b=10;
+    int *pont;
+    pont=&b;
+    a=20;
+    *pont=a;
+    printf("%i, %i",a,b);
+    getchar();
+    return 0;
+}
