@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main(void){
+    //Definindo uma estrutura horário com membros ponteiros que apontam para variáveis inteiras
+    struct horario{int *pHora;int *pMinuto;int *pSegundo};
+
+    //Declarando uma variável de tipo horario
+    struct horario hoje;
+
+    int hora=200;
+    int minuto=300;
+    int segundo=400;
+
+    hoje.pHora=&hora;//O ponteiro pHora de hoje está apontando para o endereço de memória da variável int hora
+    hoje.pMinuto=&minuto;
+    hoje.pSegundo=&segundo;
+
+    printf("Hora = %i\n", *hoje.pHora);
+    printf("Minuto = %i\n", *hoje.pMinuto);
+    printf("Segundo = %i\n", *hoje.pSegundo);
+
+    *hoje.pSegundo=1000;//Valor
+
+    printf("Segundo = %i\n", *hoje.pSegundo);
+
+    getchar();
+    return 0;
+}
