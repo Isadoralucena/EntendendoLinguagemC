@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main(void){
+
+    char x[]="coxinha";
+
+    //fputc(função) e putc(macro e função) são iguais, elas escrevem um caractere em um output, especificados
+    //putc('a',stdout);//stdout representa padrão de saída, na qual em sua maioria é o console/tela
+
+    FILE *file=fopen("D:\\C\\Manipulação de arquivos de texto\\Caractere.txt","w");
+    //putc(x[2],file);
+
+    int i=0;
+    while(x[i] != '\0'){
+        //putc(x[i],stdout);//Output = tela
+        putc(x[i],file);//Output = arquivo
+        ++i;
+    }
+
+    getchar();
+    return 0;
+}
