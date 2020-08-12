@@ -1,0 +1,12 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+void main(){
+    setlocale(LC_ALL,"portuguese");
+    float a;
+    printf("Digite um número: ");
+    scanf("%f", &a);
+    printf("O número digitado foi: %04.f", a);
+    system("pause");
+}
