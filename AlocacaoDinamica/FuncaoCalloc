@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>//Permite o uso das funções: malloc, calloc, realloc, free
+
+
+int main(void){
+
+    //A função calloc cria um vetor de tamanho dinâmico, ou seja, definido durante a execução do programa
+    //Diferente da malloc, além de inicializar os espaços de memória ainda atribui o valor 0 para cada um deles
+    int *p;
+    p=(int *)calloc(10,sizeof(int));//0
+    //p=(int *)malloc(10 * sizeof(int));//Lixo de memória
+
+    //*(p+1)=10;
+
+    //printf("%i",*p);//Posição [0]
+    //printf("%i",*(p+1));//Ou printf("%i",p[1]);
+
+    int i;
+    for(i=0;i<10;++i){
+        printf("Endereco de p[%i] = %p, e o seu valor = %i\n",i,&p[i],p[i]);//&p[i] = (p+i),e *(p+i)=p[i]
+    }
+
+    getchar();
+    return 0;
+}
