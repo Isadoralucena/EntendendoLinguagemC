@@ -1,0 +1,55 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>//Biblioteca para acentuação
+
+void main(){
+
+    setlocale(LC_ALL,"portuguese");
+
+    int i, x, aux, v[8];
+    int p[8]={0,0,0,0,0,0,0,0};
+    int n[8]={0,0,0,0,0,0,0,0};
+
+    //Comando de leitura
+    for(i=0;i<8;i++){
+        printf("Digite um número inteiro: ");
+        scanf("%i",&v[i]);
+    }
+
+    //Comando de fluxo
+    for(i=0;i<8;i++){
+        if(v[i]>0){
+            p[i]=v[i];//Atribuindo
+        }else if(v[i]<0){
+            n[i]=v[i];//Atriuindo
+        }else{}
+    }
+
+    //Comando de ordenação
+    printf("\nOrdem decrescente: ");
+    for(i=0;i<8;i++){
+        for(x=0;x<8;x++){
+            if(p[i]>p[x]){
+                aux=p[i];
+                p[i]=p[x];
+                p[x]=aux;
+            }if(n[i]>n[x]){
+                aux=n[i];
+                n[i]=n[x];
+                n[x]=aux;
+            }
+        }
+    }
+
+    //Comando de exibição
+   for(i=0;i<8;i++){
+        if(p[i]>0){
+            printf("\nPositivo %i", p[i]);
+        }else{}
+        if(n[i]<0){
+            printf("\nNegativo %i", n[i]);
+        }else{}
+   }
+   system("pause");
+   return 0;
+}
