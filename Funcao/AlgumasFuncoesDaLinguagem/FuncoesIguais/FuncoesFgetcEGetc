@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main(void){
+
+    char x[100];
+
+    //getc(macro e função) e fgetc(função), retornam o valor do caractere lido, na posição 0 de x
+    //x[0]=fgetc(stdin);
+    //x[0]=getc(stdin);
+    //printf("%c",x[0]);
+
+    int i=0;
+    while((x[i]=fgetc(stdin)) != '\n'){
+        ++i;//Lendo caractere de um em um, e colocando em x
+    }
+
+    x[++i]='\0';//Incluindo o caractere nulo finalizador de strings na última posição de x + 1
+
+    printf("%s",x);
+
+    getchar();
+    return 0;
+}
