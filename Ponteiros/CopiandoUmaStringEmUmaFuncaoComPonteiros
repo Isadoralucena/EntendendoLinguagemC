@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+//A função não retorna nada e recebe dois endereços de memórias que apontam para caracteres
+void copiarString(char *copiarDaqui,char *colarAqui){
+
+    while(*copiarDaqui != '\0'){//'\0' é o caractere que finaliza uma string
+        *colarAqui= *copiarDaqui;//Valor
+        ++copiarDaqui;//O loop vai parar quando chegar ao finalizador de strings
+        ++colarAqui;
+    }
+    *colarAqui='\0';//O caractere nulo passou a ser considerado
+}
+int main(void){
+    void copiarString(char *copiarDaqui,char *colarAqui);
+
+    char string1[]="pao com mortadela";
+    char string2[20];
+
+    copiarString(string1,string2);
+    printf("%s\n",string2);
+
+    getchar();
+}
